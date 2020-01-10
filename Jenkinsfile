@@ -11,7 +11,7 @@ pipeline {
 
     }
     stages {
-        stage('parallel-1') {
+        stage('params') {
             when {
                 expression {
                     // Given our default value is true, this should 
