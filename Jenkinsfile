@@ -29,7 +29,7 @@ pipeline {
     stage('condition') {
         steps {
             when {
-            
+            ${params.CHECK}:enabled
             }
         
         }
