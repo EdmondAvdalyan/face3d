@@ -19,7 +19,7 @@ pipeline {
             }
         }
         
-        stage('parallel-1') {
+        stage('example') {
             when {
                 expression {
                     // Given our default value is true, this should
