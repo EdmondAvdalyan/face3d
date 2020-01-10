@@ -13,20 +13,13 @@ pipeline {
 }
     stages{
         stage ('params') {
-
             steps {
                 echo "{$params}"
             }
         }
-    }
-}
         
-    agent any
-    parameters {
-        // Default value here is true.
-        booleanParam(name: 'CHECK', defaultValue: true, description: 'This boolean defaults to true!')
-    }
-    stages {
+    
+    stage {
         stage('parallel-1') {
             when {
                 expression {
@@ -42,3 +35,4 @@ pipeline {
         } // end of stage
     } // end stages
 
+    }
