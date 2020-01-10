@@ -19,7 +19,7 @@ pipeline {
         }
         
     
-    stage {
+    
         stage('parallel-1') {
             when {
                 expression {
@@ -33,6 +33,6 @@ pipeline {
                 echo "MUST BE TRUE"
             } // end of steps
         } // end of stage
-    } // end stages
+     // end stages
 
     }
