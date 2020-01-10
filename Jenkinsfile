@@ -10,18 +10,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 
     }
-    stages {
-        stage('params') {
-            when {
-                expression {
-                    // Given our default value is true, this should 
-                    // run if I don't change the parameter from its 
-                    // default value of true, to false.
-                    return TRUE_OR_FALSE
-                }
-            }
-        }
-          }
+
     
         stage ('params') {
             steps {
