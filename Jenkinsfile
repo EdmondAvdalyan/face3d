@@ -28,10 +28,11 @@ pipeline {
                     return CHECK
                 }
             }
+        }
             steps {
                 echo "MUST BE TRUE"
  
-    
+            }
 }
 
 
