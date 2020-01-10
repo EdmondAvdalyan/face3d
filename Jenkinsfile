@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo " ${params.TEST}"
+                echo " ${params}"
 
                 echo " ${params.multiline}"
 
@@ -24,6 +24,14 @@ pipeline {
 
                 
             }
+        }
+    }
+    stage('condition') {
+        steps {
+            when {
+            
+            }
+        
         }
     }
 }
