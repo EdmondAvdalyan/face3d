@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage ('params') {
             steps {
-                echo "{$params\n}"
+                echo "{$params}"
             }
         }
     } 
