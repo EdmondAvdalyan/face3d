@@ -12,15 +12,12 @@ pipeline {
         
     }
     stages {
-        stage('Example') {
-            steps {
-                script {
-                if (params.CHECK:true)
+        stage('params') {
                 echo " ${params}"
 
               
 
-                }
+                
             }
         }
     }
