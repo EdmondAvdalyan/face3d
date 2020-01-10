@@ -20,7 +20,7 @@ pipeline {
         }
     }
 }
-        pipeline {
+        
     agent any
     parameters {
         // Default value here is true.
@@ -41,4 +41,4 @@ pipeline {
             } // end of steps
         } // end of stage
     } // end stages
-}
+
