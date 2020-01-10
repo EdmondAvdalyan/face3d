@@ -11,6 +11,16 @@ pipeline {
 
   }
     stages {
+          stages {
+        stage('parallel-1') {
+            when {
+                expression {
+                    // Given our default value is true, this should 
+                    // run if I don't change the parameter from its 
+                    // default value of true, to false.
+                    return TRUE_OR_FALSE
+                }
+            }
         stage ('params') {
             steps {
                 echo "{$params}"
