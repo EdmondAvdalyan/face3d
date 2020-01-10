@@ -12,13 +12,16 @@ pipeline {
        
     }
     stages {
-        stage('Example') {
-            steps{
+        stage('Continue') {
+            when {
+                expression { params.CHECK == 'true'}
+            }
+                steps {
                 echo " ${params}"
 
-            }
+            
 
-                
+               }
             }
         }
     }
