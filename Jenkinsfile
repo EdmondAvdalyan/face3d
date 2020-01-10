@@ -11,19 +11,7 @@ pipeline {
 
        
     }
-    stages {
-        stage('Example') {
-            when {
-              expression { return token ==~ /(?i)(Y|YES|T|TRUE|ON|RUN)/ }
-            }
-                steps {
-                echo " ${params}"
-
-            
-
-               }
-            }
-        }
+ 
     }
    
 
