@@ -12,7 +12,7 @@ pipeline {
        
     }
     stages {
-        stage('Continue') {
+        stage('Example') {
             when {
                 expression { params.CHECK == 'true'}
             }
