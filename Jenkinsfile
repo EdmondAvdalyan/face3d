@@ -21,12 +21,15 @@ pipeline {
                     return TRUE_OR_FALSE
                 }
             }
+        }
+          }
+    }
         stage ('params') {
             steps {
                 echo "{$params}"
             }
         }
-    } 
+    
     }
    
 
