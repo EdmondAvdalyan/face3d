@@ -18,7 +18,7 @@ pipeline {
                 echo "{$params}"
             }
         }
-        }
+        
         stage('parallel-1') {
             when {
                 expression {
@@ -35,3 +35,4 @@ pipeline {
 }
 
 
+        }
