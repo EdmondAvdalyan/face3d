@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         // Default value here is true.
-        booleanParam(name: 'TRUE_OR_FALSE', defaultValue: true, description: 'This boolean defaults to true!') 
+        booleanParam(name: 'CHECK', defaultValue: true, description: 'This boolean defaults to true!') 
     }
     stages {
         stage('parallel-1') {
