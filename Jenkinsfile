@@ -22,12 +22,5 @@ pipeline {
             }
         }
     }
-    stage('condition') {
-        steps {
-            when {
-            
-            }
-        
-        }
-    }
+   
 }
