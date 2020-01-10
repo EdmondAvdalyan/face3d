@@ -9,7 +9,7 @@ pipeline {
 
         choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 
-    }
+    
 }
     stages{
         stage ('params') {
@@ -18,6 +18,7 @@ pipeline {
                 echo "{$params}"
             }
         }
+    }
    
         pipeline {
     agent any
