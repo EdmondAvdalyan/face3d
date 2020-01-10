@@ -19,7 +19,7 @@ pipeline {
             }
         }
         
-        stage('example') {
+        stage('params') {
             when {
                 expression {
                     // Given our default value is true, this should
