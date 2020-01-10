@@ -11,9 +11,9 @@ pipeline {
 
     }
 
-    
-        stages ('params') {
-           stage{ 
+    stages{
+        stage ('params') {
+            
             steps {
                 echo "{$params}"
             }
