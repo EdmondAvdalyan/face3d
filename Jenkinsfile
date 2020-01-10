@@ -16,11 +16,7 @@ pipeline {
             steps {
                 echo " ${params}"
 
-                echo " ${params.multiline}"
-
-                echo "${params.CHECK}"
-
-                echo "${params.CHOICE}"
+              
 
                 
             }
@@ -29,7 +25,7 @@ pipeline {
     stage('condition') {
         steps {
             when {
-            ${params.CHECK}:enabled
+            
             }
         
         }
