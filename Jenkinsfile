@@ -9,11 +9,10 @@ pipeline {
 
         choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 
-    
-}
+  }
         
     
-        stages{    
+        stages {    
         stage('parallel-1') {
             when {
                 expression {
@@ -28,12 +27,11 @@ pipeline {
             } // end of steps
         } // end of stage
      // end stages
-    }
     
-    stages{
         stage ('params') {
             steps {
                 echo "{$params}"
             }
         }
     }
+}
