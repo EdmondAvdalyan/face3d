@@ -12,7 +12,7 @@ pipeline {
        
     }
     stages {
-        stage('params') {
+        stage('Example') {
                 echo " ${params}"
 
               
