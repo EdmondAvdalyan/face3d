@@ -11,15 +11,9 @@ pipeline {
 
     
 }
-    stages{
-        stage ('params') {
-            steps {
-                echo "{$params}"
-            }
-        }
         
     
-    
+        stages{    
         stage('parallel-1') {
             when {
                 expression {
@@ -35,4 +29,11 @@ pipeline {
         } // end of stage
      // end stages
     }
+    
+    stages{
+        stage ('params') {
+            steps {
+                echo "{$params}"
+            }
+        }
     }
