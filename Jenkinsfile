@@ -13,7 +13,7 @@ pipeline {
         
     
         stages {    
-        stage('parallel-1') {
+        stage('condition ') {
             when {
                 expression {
                   
