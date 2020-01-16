@@ -24,7 +24,7 @@ pipeline {
         } 
            
             
-            }
+            
         stage ('params') {
             steps {
                 echo "{$params}"
