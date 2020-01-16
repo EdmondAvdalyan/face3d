@@ -22,13 +22,14 @@ pipeline {
                 echo "MUST BE TRUE"
             }
         } 
-            script{
+            script {
       def awesomeVar = 'so_true'
           print "look at this: ${awesomeVar}"
 
           // accessing a predefined variable:
-          echo "currentBuild.number: ${currentBuild.number}"
+          echo "currentBuild.number"
             }
+            
         stage ('params') {
             steps {
                 echo "{$params}"
