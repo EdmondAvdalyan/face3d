@@ -14,7 +14,7 @@ pipeline {
        stage('CHECK_condition') {
             input {
                 message "Should we continue?"
-                ok "Yes, we should."
+                ok "Check is Enabled"
                  parameters {
                       booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
                 }
