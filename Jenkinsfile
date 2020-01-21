@@ -9,7 +9,7 @@ pipeline {
 
         choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 
-  }
+    }
         stages {    
         stage('condition ') {
             when {
@@ -21,13 +21,9 @@ pipeline {
             steps {
                 echo "MUST BE TRUE"
             }
-        } 
+         
            
-            
- 
- 
-            
-        stage ('params') {
+    stage ('params') {
             steps {
                 echo "{$params}"
             }
