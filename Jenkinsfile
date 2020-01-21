@@ -12,11 +12,10 @@ pipeline {
   }
         stages {    
        stage('CHECK_condition') {
-           steps {
-           input {
+          input {
                 message "Should we continue?"
                 ok "Check is Enabled"
-           }
+          
                parameters {
                        booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
 
@@ -24,11 +23,11 @@ pipeline {
                 }
             
             steps {
-                echo  "${params.CHECK}"
+                echo  "${params}"
             }
         }
      
     }
 }
-        }
+        
 
