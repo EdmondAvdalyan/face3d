@@ -18,7 +18,7 @@ pipeline {
             
             steps {
                 echo "MUST BE TRUE"
-            }
+            
         } 
         
     
