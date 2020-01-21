@@ -16,7 +16,7 @@ pipeline {
                 message "Should we continue?"
                 ok "Check is Enabled"
                  parameters {
-                      booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
+                     ${params.CHECK}
                 }
             }
             steps {
