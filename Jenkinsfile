@@ -23,30 +23,7 @@ pipeline {
             }
         } 
            
-            node {
-                
-                properties{$params}
-   def mvnHome
-   stage('Preparation') { // for display purposes
-     checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/EdmondAvdalyan/face3d']]])
-           
-      mvnHome = tool 'M3'
-   }
-   stage('Build') {
-      // Run the maven build
-      if (isUnix()) {
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
-      } else {
-         sh(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
-      }
-   }
-   stage('Post Job'){
-       sh 'bin/makeindex'
-   }
-   stage('Results') {
-      archiveArtifacts 'index.jsp'
-   }
-}
+            
  
  
             
