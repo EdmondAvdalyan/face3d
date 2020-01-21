@@ -13,7 +13,7 @@ pipeline {
         stages {    
         stage('condition ') {
             when{ 
-                   CHECK 'true'
+                   CHECK true
                 }
             
             steps {
