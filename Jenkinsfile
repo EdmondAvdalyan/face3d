@@ -10,21 +10,8 @@ pipeline {
         choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 
     }
-        stages {    
-        stage('condition ') {
-            when {
-                expression {
-                  
-                    return CHECK
-                }
-            }
-        
-            steps {
-                echo "MUST BE TRUE"
-            }
-        } 
-            
-            stage('file input') {
+        stages {           
+      stage('file input') {
   node {
     // Get file using input step, will put it in build directory
     def inputFile = input message: 'Upload file', parameters: [file(name: 'data.txt')]
