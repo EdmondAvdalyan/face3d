@@ -18,11 +18,11 @@ pipeline {
                     return CHECK
                 }
             }
-        }
+        
             steps {
                 echo "MUST BE TRUE"
             }
-         
+        } 
           stage ('params') {
             steps {
                 echo "{$params}"
