@@ -15,11 +15,11 @@ pipeline {
             when {
           expression { params.CHECK == true} 
             }  
-                }
+                
             
             steps {
                 echo "MUST BE TRUE"
-            
+            }
         } 
         
     
