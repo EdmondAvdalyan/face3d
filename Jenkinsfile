@@ -12,13 +12,15 @@ pipeline {
   }
         stages {    
        stage('CHECK_condition') {
-            input {
+           when {
+                   ${params.CHECK == 1}
+           }
+           input {
                 message "Should we continue?"
                 ok "Check is Enabled"
-                 when {
-                     ${params.CHECK == 1}
+                 
                 }
-            }
+            
             steps {
                 echo  "${params.CHECK}"
             }
