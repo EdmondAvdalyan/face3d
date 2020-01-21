@@ -22,7 +22,19 @@ pipeline {
             }
         } 
         
-    
+    stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                      booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
+                }
+            }
+            steps {
+                echo "Hello, ${CHECK}, nice to meet you."
+            }
+        }
             
         stage ('params') {
             steps {
