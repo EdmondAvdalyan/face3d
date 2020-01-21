@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                echo  "${params}"
+                echo  "${params.CHECK}"
             }
         }
      
