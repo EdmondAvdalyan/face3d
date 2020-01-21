@@ -12,8 +12,9 @@ pipeline {
   }
         stages {    
        stage('CHECK_condition') {
-           when {
-                   ${params.CHECK == 1}
+           steps {
+               script {
+                   if ${params.CHECK == 1} {
            }
            input {
                 message "Should we continue?"
