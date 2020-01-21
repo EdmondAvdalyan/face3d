@@ -15,8 +15,8 @@ pipeline {
             input {
                 message "Should we continue?"
                 ok "Check is Enabled"
-                 parameters {
-                     ${params.CHECK}
+                 when {
+                     ${params.CHECK == 1}
                 }
             }
             steps {
