@@ -22,7 +22,7 @@ pipeline {
                 echo "MUST BE TRUE"
             }
         } 
-        }  
+        
     
             
         stage ('params') {
