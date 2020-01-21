@@ -19,7 +19,7 @@ pipeline {
            input {
                 message "Should we continue?"
                 ok "Check is Enabled"
-                 
+           }
                 }
             
             steps {
