@@ -11,36 +11,19 @@ pipeline {
 
   }
         stages {    
-        stage('condition ') {
-            when {
-          expression { params.CHECK == true} 
-            }  
-                
-            
-            steps {
-                echo "MUST BE TRUE"
-            }
-        } 
-        
-    stage('Example') {
+       stage('CHECK_condition') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
+                 parameters {
                       booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
                 }
             }
             steps {
-                echo "Hello, ${CHECK}, nice to meet you."
+                echo "echo "{$params}""
             }
         }
-            
-        stage ('params') {
-            steps {
-                echo "{$params}"
-            }
-        }
+     
     }
 }
 
