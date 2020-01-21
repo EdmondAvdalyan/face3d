@@ -12,8 +12,8 @@ pipeline {
   }
         stages {    
         stage('condition ') {
-            when{ 
-                   CHECK true
+          expression { params.CHECK == true} 
+                   
                 }
             
             steps {
