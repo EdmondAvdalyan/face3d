@@ -23,8 +23,7 @@ pipeline {
                 echo "MUST BE TRUE"
             }
          
-           
-    stage ('params') {
+          stage ('params') {
             steps {
                 echo "{$params}"
             }
