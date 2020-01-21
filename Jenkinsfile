@@ -12,12 +12,10 @@ pipeline {
   }
         stages {    
         stage('condition ') {
-            when {
-                expression {
-                  
-                    return CHECK
+            when{ 
+                   CHECK 'true'
                 }
-            }
+            
             steps {
                 echo "MUST BE TRUE"
             }
