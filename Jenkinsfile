@@ -22,7 +22,7 @@ pipeline {
                 echo "MUST BE TRUE"
             }
         } 
-           
+        }  
     node {
     properties([parameters([string(defaultValue: 'ronaldo', description: '', name: 'name', trim: false)])])
    def mvnHome
