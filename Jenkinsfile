@@ -30,7 +30,7 @@ pipeline {
 		
       def match = a.count('test')
 	println "Number of ocurencces is: ${match}"
-       
+			pirntln "${a}"      
    
 }
                    
