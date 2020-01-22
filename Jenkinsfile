@@ -29,8 +29,8 @@ pipeline {
       def a = "some test\nThis is a test text\n"; 
 		
       def match = a.count('test')
-	println "Number of ocurencces is: ${match}"
-			pirntln "${a}"      
+	
+       pirntln "${a}"      
    
 }
                    
