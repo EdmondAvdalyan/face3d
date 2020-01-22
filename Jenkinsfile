@@ -30,7 +30,7 @@ pipeline {
 		
       // Using public int indexOf(string str,int fromIndex)
 	def match = a.count('test')
-      println($match)
+			println ${match}
        
    
 }
