@@ -29,8 +29,8 @@ pipeline {
       def a = "some test\nThis is a test text\n"; 
 		
       // Using public int indexOf(string str,int fromIndex) 
-      println(a.indexOf('test',1)); 
-      println(a.indexOf('or',8)); 
+      println(a.count('test')); 
+       
    
 }
                    
