@@ -25,8 +25,8 @@ pipeline {
             steps {
                 script{
                 
-   static void main(String[] args) { 
-      String a = "Hello World"; 
+    
+      def a = "Hello World"; 
 		
       // Using public int indexOf(int ch) 
       println(a.indexOf('e')); 
@@ -43,7 +43,7 @@ pipeline {
       // Using public int indexOf(string str,int fromIndex) 
       println(a.indexOf('el',1)); 
       println(a.indexOf('or',8)); 
-   } 
+   
 }
                    
                 
