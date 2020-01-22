@@ -24,8 +24,8 @@ pipeline {
             
             steps {
                 script{
-                def s = "IF(AND(x>0,x<100),5,IF(AND(x>101,x<200),6,10))"
-assert 2 == s.count("IF(")
+                def s = "some test\nThis is a test text\n"
+assert 2 == s.count("test(")
                 }
             }
            }
