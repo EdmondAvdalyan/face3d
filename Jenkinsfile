@@ -26,7 +26,7 @@ pipeline {
                 script{
                 def s = "some test\nThis is a test text\n"
                  assert 2 == s.count("test")
-                    echo assert 2
+                    echo  2
                 }
             }
            }
