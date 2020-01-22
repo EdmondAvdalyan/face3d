@@ -28,8 +28,9 @@ pipeline {
     
       def a = "some test\nThis is a test text\n"; 
 		
-      // Using public int indexOf(string str,int fromIndex) 
-      println(a.count('test')); 
+      // Using public int indexOf(string str,int fromIndex)
+	def match = a.count('test')
+      println($match)
        
    
 }
