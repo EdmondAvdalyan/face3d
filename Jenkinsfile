@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script{
                 def s = "some test\nThis is a test text\n"
-assert 2 == s.count("test(")
+                 assert 2 == s.count("test")
                 }
             }
            }
