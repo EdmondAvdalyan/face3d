@@ -24,7 +24,7 @@ pipeline {
             
             steps {
                 script{
-               class Example { 
+                
    static void main(String[] args) { 
       String a = "Hello World"; 
 		
