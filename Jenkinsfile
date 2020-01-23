@@ -31,7 +31,7 @@ pipeline {
       def match = a.count('test')  
        
 			  String input = "some test\nThis is a test text\n";
-  			  def b = a.matches("(?is).*2ndline.*");
+  			  def b = a.matches("(?is).*test.*");
 			  println("Match" + b)
 
    
