@@ -30,11 +30,8 @@ pipeline {
 		
       def match = a.count('test')  
   
-			String input = "1stline\n2ndLINE\n3rdline";
-  			Pattern p = Pattern.compile("(?i)2ndline", Pattern.DOTALL);
-			Matcher m = p.matcher(input);
-			boolean b = m.find();
-			print("match found: " + b);
+			  String input = "1stline\n2ndLINE\n3rdline";
+  			  boolean b = input.matches("(?is).*2ndline.*");
 
    
 }
