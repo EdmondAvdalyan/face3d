@@ -29,8 +29,8 @@ pipeline {
 			   println('Number of Occurencies:' + count)
                 
 			def exp = /(?mi)test/
-                         def line = 'some test\nThis is a test text\n'
-                           def m = line =~ exp
+                         
+                           def m = string =~ exp
                               m.eachWithIndex{ match, idx ->
                             println "line[${idx}] = ${match}"
 	              
