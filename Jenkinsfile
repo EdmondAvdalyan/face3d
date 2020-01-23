@@ -35,7 +35,7 @@ This is a test text
 '''
 def m = test =~ exp
 m.eachWithIndex{ match, idx ->
-    println "id[${idx}] = ${match}"
+    println "m[${idx}] = ${match}"
 }
 
    
