@@ -26,11 +26,9 @@ pipeline {
                 script{
                 
     
-     def exp = /(?mi)signature/
-def approve = '''approved my signature
-Approved new signature
-APPROVED old signature
-apprOved'''
+     def exp = /(?mi)test/
+def approve = '''some test
+This is a test text'''
 def m = approve =~ exp
 m.eachWithIndex{ match, idx ->
     println "m[${idx}] = ${match}"
