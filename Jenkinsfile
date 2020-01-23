@@ -32,6 +32,7 @@ pipeline {
   
 			  String input = "1stline\n2ndLINE\n3rdline";
   			  boolean b = input.matches("(?is).*2ndline.*");
+			  println("Match" +b)
 
    
 }
