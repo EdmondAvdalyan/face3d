@@ -32,7 +32,7 @@ pipeline {
        
 			  String input = "some test\nThis is a test text\n";
   			  def b = a.matches("(?is).*test.*");
-			  println("Match" + b + "The number of occurencies is:" + match + input)
+			  println("Match" + b + "The number of occurencies is:" + match)
 
    
 }
