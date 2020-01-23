@@ -32,6 +32,8 @@ This is a test text'''
 def m = line =~ exp
 m.eachWithIndex{ match, idx ->
     println "line[${idx}] = ${match}"
+	def count = line.count('test')
+	println("Number of occurencies is:" + count)
 }
 
 
