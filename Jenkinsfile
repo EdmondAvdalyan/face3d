@@ -25,15 +25,15 @@ pipeline {
             steps {
                 script{
                 
-    
-     def exp = /(?mi)test/
-def line = '''some test
-This is a test text'''
-def m = line =~ exp
-m.eachWithIndex{ match, idx ->
-    println "line[${idx}] = ${match}"
-	def count = line.count('test')
-	println("Number of occurencies is:" + count)
+			def exp = /(?mi)test/
+                        def line = '''some test
+                                   This is a test text'''
+                        def m = line =~ exp
+                            m.eachWithIndex{ match, idx ->
+                               println "line[${idx}] = ${match}"
+	              
+		        def count = line.count('test')
+	                       println("Number of occurencies is:"  count)
 }
 
 
