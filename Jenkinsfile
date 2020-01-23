@@ -29,7 +29,7 @@ pipeline {
       def a = "some test\r\nThis is a test text\r\n"; 
 		
       def match = a.count('test')
-	
+			println "${match}"	
        
 
    
