@@ -21,6 +21,7 @@ pipeline {
 
                }
                 }
+	       echo ${params}
             
             steps {
                 script{
