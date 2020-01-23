@@ -33,7 +33,7 @@ pipeline {
                                println "line[${idx}] = ${match}"
 	              
 		        def count = line.count('test')
-	                       println("Number of occurencies is:"  count)
+	                       println("Number of occurencies is:" + count)
 }
 
 
