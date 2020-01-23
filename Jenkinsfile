@@ -26,8 +26,7 @@ pipeline {
                 script{
                 
 			def exp = /(?mi)test/
-                        def line = '''some test
-                                   This is a test text'''
+                        def line = 'some test\nThis is a test text\n'
                         def m = line =~ exp
                             m.eachWithIndex{ match, idx ->
                                println "line[${idx}] = ${match}"
