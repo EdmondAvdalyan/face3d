@@ -21,9 +21,10 @@ pipeline {
 
                }
                 }
-	       echo ${params}
+	      
             
             steps {
+		     echo ${params}
                 script{
 			def string = 'some test\nThis is a test text\n'
 	                 def count = string.count('test')
