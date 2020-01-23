@@ -28,9 +28,13 @@ pipeline {
     
       def a = "some test\r\nThis is a test text\r\n"; 
 		
-      def match = a.count('test')
-			print("match found: " + match);	
-       boolean b = input.matches("(?is).*This is a test text.*");
+      def match = a.count('test')  
+  
+			String input = "1stline\n2ndLINE\n3rdline";
+  			Pattern p = Pattern.compile("(?i)2ndline", Pattern.DOTALL);
+			Matcher m = p.matcher(input);
+			boolean b = m.find();
+			print("match found: " + b);
 
    
 }
