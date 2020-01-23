@@ -26,7 +26,7 @@ pipeline {
                 script{
                 
     
-     def exp = /(?mi)approved/
+     def exp = /(?mi)signature/
 def approve = '''approved my signature
 Approved new signature
 APPROVED old signature
