@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'TEST', defaultValue: 'test', description: 'test?')
+        string(name: 'TEST', defaultValue: 'test', description: 'test')
 
         text(name: 'multiline', defaultValue: 'some test\nThis is a test text\n', description: 'multiline text')
 
@@ -33,7 +33,8 @@ pipeline {
 	              
 		        def string = 'some test\nThis is a test text\n'
 	                       def count = string.count('test')
-				    println("Number of occurencies is:" + count)
+				    println "${server}"
+
 }
 
 
