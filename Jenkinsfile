@@ -31,7 +31,7 @@ def line = '''some test
 This is a test text'''
 def m = line =~ exp
 m.eachWithIndex{ match, idx ->
-    println "m[${idx}] = ${match}"
+    println "line[${idx}] = ${match}"
 }
 
 
