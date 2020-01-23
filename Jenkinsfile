@@ -16,15 +16,15 @@ pipeline {
                 message "Should we continue?"
                 ok "Check is Enabled"
           
-               parameters {
-                       booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
+               steps {
+                     echo "${params.CHECK}"
 
                }
                 }
 	      
             
             steps {
-		     echo "${params.defaultValue}"
+		     echo "${params.CHECK}"
                 script{
 			def string = 'some test\nThis is a test text\n'
 	                 def count = string.count('test')
