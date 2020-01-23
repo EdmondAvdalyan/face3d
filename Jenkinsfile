@@ -30,7 +30,7 @@ pipeline {
 		
       def match = a.count('test')
 	
-       pirntln "${a}"      
+       pirntln "${match}"      
    
 }
                    
