@@ -26,11 +26,12 @@ pipeline {
                 script{
                 
     
-      def a = "some test\nThis is a test text\n"; 
+      def a = "some test\r\nThis is a test text\r\n"; 
 		
       def match = a.count('test')
 	
-       pirntln "${match}"      
+       System.out.println(match.contains("1stline"));
+
    
 }
                    
