@@ -29,14 +29,13 @@ pipeline {
       def a = "some test\r\nThis is a test text\r\n"; 
 		
         
-       def exp = /(?mi)^approved/
-def approve = '''approved my signature
-Approved new signature
-APPROVED old signature
-apprOved'''
-def m = approve =~ exp
+       def exp = /(?mi)^test/
+def test = '''some test
+This is a test text
+'''
+def m = test =~ exp
 m.eachWithIndex{ match, idx ->
-    println "m[${idx}] = ${match}"
+    println "id[${idx}] = ${match}"
 }
 
    
