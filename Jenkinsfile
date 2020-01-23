@@ -29,10 +29,15 @@ pipeline {
       def a = "some test\r\nThis is a test text\r\n"; 
 		
       def match = a.count('test')  
-       
-			  String input = "some test\nThis is a test text\n";
-  			  def b = a.matches("(?is).*test.*");
-			  println("Match" + b + "The number of occurencies is:" + match)
+       def exp = /(?mi)^approved/
+def approve = '''approved my signature
+Approved new signature
+APPROVED old signature
+apprOved'''
+def m = approve =~ exp
+m.eachWithIndex{ match, idx ->
+    println "m[${idx}] = ${match}"
+}
 
    
 }
