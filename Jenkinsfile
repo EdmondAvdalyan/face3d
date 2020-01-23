@@ -31,8 +31,9 @@ pipeline {
                             m.eachWithIndex{ match, idx ->
                                println "line[${idx}] = ${match}"
 	              
-		        def count = line.count('test')
-	                       println("Number of occurencies is:" + count)
+		        def string = 'some test\nThis is a test text\n'
+	                       def count = string.count('test')
+				    println("Number of occurencies is:" + count)
 }
 
 
