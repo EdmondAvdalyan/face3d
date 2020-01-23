@@ -30,7 +30,7 @@ pipeline {
 		
       def match = a.count('test')
 			print("match found: " + match);	
-       
+       boolean b = input.matches("(?is).*This is a test text.*");
 
    
 }
