@@ -30,7 +30,7 @@ pipeline {
 		
       def match = a.count('test')
 	
-       System.out.println(match.contains("1stline"));
+       println(match.contains("1stline"));
 
    
 }
