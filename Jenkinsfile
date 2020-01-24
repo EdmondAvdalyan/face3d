@@ -42,7 +42,7 @@ pipeline {
 	}
 
         stage('Example Deploy') {
-          parallel {
+         
             when {
                 branch 'master'
             }
