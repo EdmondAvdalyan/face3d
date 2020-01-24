@@ -46,7 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                 archiveArtifacts artifacts: '**/*/pipeline_master.zip'
+                 archiveArtifacts artifacts: '**/pipeline_master.zip'
             }
 
         }
