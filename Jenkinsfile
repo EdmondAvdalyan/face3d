@@ -41,7 +41,7 @@ pipeline {
 }
 	}
 
-        stage('Check_master) {
+        stage('Check_master') {
             when {
                 branch 'master'
             }
