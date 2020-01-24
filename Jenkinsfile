@@ -42,14 +42,14 @@ pipeline {
 	}
 
         stage('Example Deploy') {
-         
+          
             when {
                 branch 'master'
             }
             steps {
-                echo 'Master Branch'
-            }
+                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+            
           }
         }
     }
-
+}
