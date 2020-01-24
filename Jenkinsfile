@@ -48,7 +48,8 @@ pipeline {
             steps {
                  echo "Continue to deploy"
 		     script{
-                   def newFile = new File("textfile.txt")
+                   File file = new File('./new_file.txt')
+                   file.createNewFile()
 
                  }
             }
