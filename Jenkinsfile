@@ -46,10 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                 echo "Continue to deploy"
-		     script{
-                   File file = new File('./new_file.txt')
-                   file.createNewFile()
+		      sh 'echo "artifact file" > testfile.txt'
 
                  }
             }
