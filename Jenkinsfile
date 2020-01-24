@@ -47,6 +47,10 @@ pipeline {
             }
             steps {
                  echo "Continue to deploy"
+		     script{
+                   def newFile = new File("textfile.txt")
+
+                 }
             }
 
         }
