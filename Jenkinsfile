@@ -41,10 +41,9 @@ pipeline {
 
 
             
-   
+		}
 		}
                    
-                
             }
 	          stage('Parallel Stage') {
             when {
