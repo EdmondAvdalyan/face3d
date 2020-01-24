@@ -40,12 +40,26 @@ pipeline {
 }
 
 
-
+            
    
 		}
                    
                 
             }
+	          stage('Parallel Stage') {
+            when {
+                branch 'master'
+            }
+            failFast true
+            parallel {
+                stage('Branch A') {
+                    agent {
+                        label "for-branch-a"
+                    }
+                    steps {
+                        echo "On Branch A"
+                    }
+                }
            }
         }
      
