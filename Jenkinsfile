@@ -44,19 +44,19 @@ pipeline {
 		}
 		}
                    
+            }   
             }
-	          stage('Parallel Stage') {
+        }
+        stage('Example Deploy') {
             when {
-                branch 'master'
+                branch 'production'
             }
-            failFast true
-            parallel {
-                stage('Branch A') {
-                    agent {
-                        label "for-branch-a"
-                    }
-                    steps {
-                        echo "On Branch A"
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}
                     }
                 }
            }
