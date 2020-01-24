@@ -41,12 +41,12 @@ pipeline {
 }
 	}
 
-        stage('Example Deploy') {
+        stage('Check_master) {
             when {
                 branch 'master'
             }
             steps {
-                 archiveArtifacts artifacts: 'pipeline_master.zip'
+                 echo "Continue to deploy"
             }
 
         }
