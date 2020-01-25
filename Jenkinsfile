@@ -46,7 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-		    echo "${defaultValue}"
+                                   sh 'echo ${HELLO}'
 
                  }
             }
