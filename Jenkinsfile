@@ -46,7 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                                   sh 'echo ${string.name}'
+                                    echo '${string.name}'
 
                  }
             }
