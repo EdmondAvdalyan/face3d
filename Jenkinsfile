@@ -49,7 +49,7 @@ pipeline {
 		    script{
 			    params.each{name, value ->
 				    println "${name} = ${value}"
-				       archiveArtifacts artifacts: 'test.txt'
+				       archiveArtifacts artifacts: 'testfile.txt'
 
 			    }
 		    }
