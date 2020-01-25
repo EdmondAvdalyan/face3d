@@ -46,7 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-		      sh 'echo "artifact file" > testfile.txt'
+		    echo "${params} == ${params.defaultValue}"
 
                  }
             }
