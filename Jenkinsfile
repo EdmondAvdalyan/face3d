@@ -46,7 +46,11 @@ pipeline {
                 branch 'master'
             }
             steps {
-                                    echo "${string.name}"
+		    script{
+			    params.each{name, value ->
+				    println "line[${name}] = ${value}"
+			    }
+		    }
 
                  }
             }
