@@ -48,8 +48,10 @@ pipeline {
             steps {
 		    script{
 			    params.each{name, value ->
-				    println "${name} = ${value}"
-				       archiveArtifacts artifacts: 'testfile.txt'
+				    def ouput = "${name} = ${value}"
+                                    writeFile(file: 'testfile.txt', text: output)
+				                       sh "ls -l"
+
 
 			    }
 		    }
