@@ -46,7 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                                   sh 'echo ${HELLO}'
+                                   sh 'echo ${CHECK}'
 
                  }
             }
