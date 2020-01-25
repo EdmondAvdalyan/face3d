@@ -49,8 +49,8 @@ pipeline {
 		    script{
 			    params.each{name, value ->
 				    def ouput = "${name} = ${value}"
-                                    writeFile(file: 'testfile.txt', text: output)
-				                       sh "ls -l"
+                                    writeFile(file: 'stfile.txt', text: output)
+				                       
 
 
 			    }
