@@ -46,7 +46,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-		    echo "${params.defaultValue}"
+		    echo "${params[1]}"
 
                  }
             }
