@@ -49,7 +49,7 @@ pipeline {
 		    script{
 			    params.each{name, value ->
 				    println "${name} = ${value}"
-				        writeFile file: "usefulfile.txt", text: "This file is useful, need to archive it."
+				       archiveArtifacts artifacts: 'test.txt'
 
 			    }
 		    }
