@@ -48,7 +48,7 @@ pipeline {
             steps {
 		    script{
 			    params.each{name, value ->
-				   sh "echo ${name} = ${value}" 
+				   println "${name} = ${value}" 
                                     
 				                       
 
