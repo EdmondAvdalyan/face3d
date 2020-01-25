@@ -49,7 +49,7 @@ pipeline {
 		    script{
 			    params.each{name, value ->
 				    
-                                    writeFile(file: 'stfile.txt', text: "${name} = ${value}" )
+                                    writeFile(file: 'vtfile.txt', text: "${name} = ${value}" )
 				                       
 
 
