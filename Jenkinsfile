@@ -50,7 +50,9 @@ pipeline {
 			    params.each{name, value ->
 		             def data= "${name}"
 				   def date= "${value}"
-				    println "${date}"  
+				    
+	    writeFile file: "usefulfile.txt", text: def date = def data
+
 
 				                       
 
