@@ -51,7 +51,7 @@ pipeline {
 				    def output = "${name} = ${value}"
 				        
 				}
-			    sh "echo $output"
+			    println "${output}"
 		    }
 
                  }
