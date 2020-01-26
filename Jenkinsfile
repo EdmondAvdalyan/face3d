@@ -49,7 +49,7 @@ pipeline {
             steps {
 		    script{
 			    params.each{name, value ->
-	 		     writeFile file: "spaon", text: "${name} = ${value}"
+	 		     writeFile file: "spaon", text: "${name} = ${value},${name} = ${value},${name} = ${value}"
 				}
 			    
 	
