@@ -64,10 +64,8 @@ pipeline {
 					destination: "testfile_new.txt"
 				    )
 				 ])
-			    
-			    
-    
-                            // Archive the build output artifacts.
+			        
+			    archiveArtifacts artifacts: 'testfile_new.txt'
 			    
 	        
 				  	 
