@@ -54,17 +54,25 @@ pipeline {
 	 		     output = output + "$name = $value"
 				}
 			        writeFile file: 'testfile.txt', text: output
-                             fileOperations([
+                           
+
+			    stage('Archive param=value output') {
+			    input {
+                message "Should we continue?"
+                ok "Check is Enabled"
+
+               script {
+			    fileOperations([
 				    folderRenameOperation(
 					source: "testfile.txt",
 					destination: "testfile_new.txt"
 				    )
 				 ])
-
-			    stage "Archive param=value output"
+			    
+			    }
     
                             // Archive the build output artifacts.
-			    archiveArtifacts artifacts: 'testfile_new.txt'
+			    
 	        
 				  	 
 	 }
