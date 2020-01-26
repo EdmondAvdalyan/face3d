@@ -65,7 +65,7 @@ pipeline {
         source: "testfile.txt",
         destination: "delivery"
     )
-	 }
+	 
 
                  }
             }
