@@ -17,7 +17,7 @@ pipeline {
                 ok "Check is Enabled"
 
                parameters {
-                 text(name: 'multiline', defaultValue: 'some test\nThis is a test text\n', description: 'multiline text')
+                        booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
 
 
                }
