@@ -85,12 +85,14 @@ pipeline {
                         }
 		    }
 			stage("delete_file and clean workspace"){
+				steps{
 			fileOperations([
 				    fileDeleteOperation(
 					 'testfile_new.txt'
 					
 				    )
 				 ])
+				}
 			}
 		}
 		}
