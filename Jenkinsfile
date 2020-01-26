@@ -72,11 +72,11 @@ pipeline {
 	 }
                  }
             }
-                stage("foo") {
+                stage("read_file") {
                     steps {
                         script {
                             try {                    
-                                env.FILENAME = readFile 'testfile_nw.txt'
+                                env.FILENAME = readFile 'testfile_new.txt'
                                 echo "${env.FILENAME}"
                             }
                             catch(Exception e) {
@@ -84,6 +84,14 @@ pipeline {
                             }
                         }
 		    }
+			stage("delete_file and clean workspace"){
+			fileOperations([
+				    fileDeleteOperation(
+					 'testfile_new.txt'
+					
+				    )
+				 ])
+			}
 		}
 		}
 
