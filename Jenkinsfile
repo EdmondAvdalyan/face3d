@@ -51,7 +51,7 @@ pipeline {
 		             def data= "${name}"
 			      def date= "${value}"
 				    
-				    writeFile file: "usefulfile.txt", text: println "${name} = ${value}"
+				    writeFile file: "usefulfile.txt", text:  "${name} = ${value}"
 
 
 				                       
