@@ -50,7 +50,7 @@ pipeline {
 			    params.each{name, value ->
 		             def data= "${name}"
 				   def date= "${value}"
-				    println "${date} = ${data}"    
+				    println "${date}"  
 
 				                       
 
