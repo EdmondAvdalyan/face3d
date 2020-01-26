@@ -60,8 +60,11 @@ pipeline {
                             // Archive the build output artifacts.
 			    archiveArtifacts artifacts: 'testfile.txt'
 	           
-			    stage "rename file_name"
-		    }
+ fileOperations([
+    folderRenameOperation(
+        source: "testfile.txt",
+        destination: "delivery"
+    ),		    }
 
                  }
             }
