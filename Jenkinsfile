@@ -86,7 +86,9 @@ pipeline {
                         }
 		    }
 		}
-		
+		stage{
+			steps{
+				sh 'ls'
 	post {
         always {
             echo 'One way or another, I have finished'
@@ -99,10 +101,10 @@ pipeline {
         failure {
             echo 'CHECK PIPELINE!!!'
         }
-				}
+	}	}
 			}
 			}
-		
+}
 		
 
         
