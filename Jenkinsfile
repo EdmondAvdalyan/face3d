@@ -61,7 +61,6 @@ pipeline {
 			    archiveArtifacts artifacts: 'testfile.txt'
 	           
 			    stage "rename file_name"
-			    file.renameTo 'testfile_new.txt'
 		    }
 
                  }
