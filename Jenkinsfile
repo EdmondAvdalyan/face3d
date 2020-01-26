@@ -51,7 +51,7 @@ pipeline {
 			    params.each{name, value ->
 				    def output = "${name} = ${value}"
 			      println "${output}"
-				    writeFile file: "lrivfile.txt", text: "This file is useful, need to archive it. + ${output}"
+	writeFile file: "spaon.txt", text: "This file is useful, need to archive it. + ${output}"
 				}
 			    
 		    }
