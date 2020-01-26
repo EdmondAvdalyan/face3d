@@ -6,7 +6,14 @@ pipeline {
         text(name: 'multiline', defaultValue: 'some test\nThis is a test text\n', description: 'multiline text')
 
         booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
-        
+          credentials(
+        credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl',
+        defaultValue: 'git',
+        description: 'credentials',
+        name: 'test_creds',
+        required: true
+    )
+}
 
         choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 
