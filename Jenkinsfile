@@ -55,7 +55,7 @@ pipeline {
 				}
 			        writeFile file: 'testfile.txt', text: output
                              
-			    stage "Archive build output"
+			    stage "Archive param=value output"
     
                             // Archive the build output artifacts.
 			    archiveArtifacts artifacts: 'testfile.txt'
