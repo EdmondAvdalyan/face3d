@@ -94,7 +94,6 @@ pipeline {
 		
 post {
         always {
-            echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
         }
         success {
@@ -103,7 +102,7 @@ post {
         
         failure {
             echo 'CHECK PIPELINE!!!'
-        }
+        
 }
 }
 		
