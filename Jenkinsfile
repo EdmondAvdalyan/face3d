@@ -64,7 +64,8 @@ pipeline {
     folderRenameOperation(
         source: "testfile.txt",
         destination: "delivery"
-    ),		    }
+    )
+	 }
 
                  }
             }
