@@ -104,9 +104,12 @@ pipeline {
         }
 		}
 	post {
-    always {
-      echo 'I will always execute this!'
+    success {
+      echo 'HOORRAY!!!'
     }
+		failure {
+            echo 'CHECK PIPELINE!!!'
+        }
   }
 	
 }
