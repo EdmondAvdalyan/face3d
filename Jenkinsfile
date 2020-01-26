@@ -76,7 +76,7 @@ pipeline {
                     steps {
                         script {
                             try {                    
-                                env.FILENAME = readFile 'testfile_new.txt'
+                                env.FILENAME = readFile 'testfile_nw.txt'
                                 echo "${env.FILENAME}"
                             }
                             catch(Exception e) {
