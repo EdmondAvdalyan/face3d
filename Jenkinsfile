@@ -105,6 +105,7 @@ post {
             echo 'CHECK PIPELINE!!!'
         }
 }
+}
 		
 
         
