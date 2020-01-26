@@ -58,8 +58,8 @@ pipeline {
 
 			    stage('Archive param=value output') {
 			    input {
-                message "Should we continue?"
-                ok "Check is Enabled"
+                                   message "Should we continue?"
+                                      ok "Check is Enabled"
 
                script {
 			    fileOperations([
