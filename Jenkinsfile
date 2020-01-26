@@ -86,11 +86,13 @@ pipeline {
                         }
 		    }
 		}
-		stage{
-			steps{
-				sh 'ls'
+	
 			}
-	post {
+	
+		
+			}
+		
+post {
         always {
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
@@ -102,9 +104,6 @@ pipeline {
         failure {
             echo 'CHECK PIPELINE!!!'
         }
-	}	
-			}
-			}
 }
 		
 
