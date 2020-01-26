@@ -54,7 +54,11 @@ pipeline {
 	 		     output = output + "$name = $value"
 				}
 			        writeFile file: 'testfile.txt', text: output
-
+                             
+			    stage "Archive build output"
+    
+                            // Archive the build output artifacts.
+			    archiveArtifacts artifacts: 'testfile.txt'
 	
 			    
 		    }
