@@ -52,7 +52,8 @@ pipeline {
 				        
 				    
 
-				    def logFile = writeFile file: "newfile.txt", text: "${output}"
+				    def logFile = writeFile file: "newfile.txt"
+				    logFile.append("${output}")
 
 
 
