@@ -53,7 +53,7 @@ pipeline {
 			     
 				}
 			    
-	writeFile file: "spaon", text: "${output}"
+	writeFile file: "spaon", text: "${name} = ${value}"
 			    
 		    }
 
