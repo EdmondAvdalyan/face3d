@@ -60,12 +60,23 @@ pipeline {
                             // Archive the build output artifacts.
 			    archiveArtifacts artifacts: 'testfile.txt'
 	           
- fileOperations([
-    folderRenameOperation(
-        source: "testfile.txt",
-        destination: "delivery"
-    )
- ])
+			    stage "rename_file"
+			     input {
+                message "Should we continue?"
+                ok "Check is Enabled"
+
+               parameters {
+                        booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
+
+
+               }
+                }
+				  fileOperations([
+				    folderRenameOperation(
+					source: "testfile.txt",
+					destination: "delivery"
+				    )
+				 ])
 	 
 	 }
                  }
