@@ -84,7 +84,7 @@ pipeline {
                             }
                         }
 		    }
-			stage("delete_file and clean workspace"){
+			stage("delete_file and clean workspace") {
 				steps{
 					script{
 						
