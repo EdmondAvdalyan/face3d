@@ -48,10 +48,12 @@ pipeline {
             }
             steps {
 		    script{
+			    def output = ""
 			    params.each{name, value ->
-	 		     writeFile file: "spaon", text: "${name} = ${value},${name} = ${value},${name} = ${value}"
+	 		     output = output + "echo $name + $value"
 				}
-			    
+			        writeFile file: 'steps.groovy', text: output
+
 	
 			    
 		    }
