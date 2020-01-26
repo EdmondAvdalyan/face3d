@@ -86,6 +86,8 @@ pipeline {
 		    }
 			stage("delete_file and clean workspace"){
 				steps{
+					script{
+						
 			fileOperations([
 				    fileDeleteOperation(
 					 'testfile_new.txt'
@@ -93,6 +95,7 @@ pipeline {
 				    )
 				 ])
 				}
+			}
 			}
 		}
 		}
