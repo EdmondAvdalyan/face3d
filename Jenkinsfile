@@ -53,12 +53,12 @@ pipeline {
 			    params.each{name, value ->
 	 		     output = output + "$name = $value"
 				}
-			        writeFile file: 'testfile.txt', text: output
+			        writeFile file: '${WORKSPACE}/dev/testfile.txt', text: output
                              
 			    stage "Archive param=value output"
     
                             // Archive the build output artifacts.
-			    archiveArtifacts artifacts: 'testfile.txt'
+			    archiveArtifacts artifacts: '${WORKSPACE}/testfile.txt'
 	           
 			    stage "rename_file"
 			     input {
@@ -74,7 +74,7 @@ pipeline {
 				  fileOperations([
 				    folderRenameOperation(
 					source: "testfile.txt",
-					destination: "delivery"
+					destination: "testfile_new.txt"
 				    )
 				 ])
 	 
