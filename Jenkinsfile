@@ -86,16 +86,19 @@ pipeline {
                         }
 		    }
 		}
-			stage("delete_file and clean workspace") {
-				steps{
-					script{
-						
-			fileOperations([
-				    folderDeleteOperation(
-					source:"testfile_new.txt"
-					
-				    )
-				 ])
+		stage("delete_file and clean workspace"){
+					post {
+        always {
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+        }
+        success {
+            echo 'HOORRAY!!!'
+        }
+        
+        failure {
+            echo 'CHECK PIPELINE!!!'
+        }
 				}
 			}
 			}
