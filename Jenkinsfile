@@ -91,7 +91,7 @@ pipeline {
 					script{
 						
 			fileOperations([
-				    fileDeleteOperation(
+				    folderDeleteOperation(
 					source:"testfile_new.txt"
 					
 				    )
