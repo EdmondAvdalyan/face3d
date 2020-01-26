@@ -93,7 +93,7 @@ pipeline {
 			}
                         }
 		    }
-		stage('Git') {
+		stage('WsCleanup') {
             steps {
                 step([$class: 'WsCleanup'])
                 checkout scm
@@ -101,7 +101,7 @@ pipeline {
         }
 		}
 	
-			}
+			
 	
 		
 			
