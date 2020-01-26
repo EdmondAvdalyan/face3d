@@ -47,8 +47,8 @@ pipeline {
             }
             steps {
 		    script{
-			    new File(baseDir, 'haiku.txt')params.each{name, value ->
-		                 println "Line $name: $value"
+			    params.each{name, value ->
+				    println "${name} = ${value}"
 
 				    
 
