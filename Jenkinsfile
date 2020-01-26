@@ -51,9 +51,9 @@ pipeline {
 		    script{
 			    def output = ""
 			    params.each{name, value ->
-	 		     output = output + " $name = $value"/n
+	 		     output = output + "$name = $value"
 				}
-			        writeFile file: 'steps.groovy', text: output
+			        writeFile file: 'testfile.txt', text: output
 
 	
 			    
