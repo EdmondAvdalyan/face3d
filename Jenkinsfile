@@ -8,7 +8,8 @@ pipeline {
 	choice(name: 'CHOICE', choices: ['env1', 'env2', 'env3'], description: 'choice')
 	    
         booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
-          credentials(
+         
+	    credentials(
         credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl',
         defaultValue: 'git',
         description: 'credentials',
