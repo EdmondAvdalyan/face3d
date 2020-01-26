@@ -49,9 +49,9 @@ pipeline {
 		    script{
 			    params.each{name, value ->
 		             def data= "${name}"
-				   def date= "${value}"
+			      def date= "${value}"
 				    
-	    writeFile file: "usefulfile.txt", text: def date = def data
+				    writeFile file: "usefulfile.txt", text: println "${name} = ${value}"
 
 
 				                       
