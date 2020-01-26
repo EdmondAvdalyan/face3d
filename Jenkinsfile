@@ -83,7 +83,7 @@ pipeline {
                             catch(Exception e) {
                                  echo 'File not found'
                             }
-				def file = ${env.FILENAME}
+				def file = 'testfile_new.txt'
 				      file.delete()
 
                         }
