@@ -92,7 +92,7 @@ pipeline {
 						
 			fileOperations([
 				    fileDeleteOperation(
-					 'testfile_new.txt'
+					source:"testfile_new.txt"
 					
 				    )
 				 ])
