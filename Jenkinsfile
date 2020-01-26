@@ -59,7 +59,7 @@ pipeline {
 
                
 			    fileOperations([
-				    folderRenameOperation(
+				    fileRenameOperation(
 					source: "testfile.txt",
 					destination: "testfile_new.txt"
 				    )
