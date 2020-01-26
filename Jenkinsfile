@@ -48,8 +48,7 @@ pipeline {
             steps {
 		    script{
 			    params.each{name, value ->
-				    
-                               writeFile file: "usefulfile.txt", text: "${name} = ${value}" 
+		            sh "echo  ${name} = ${value}" 
 
 				                       
 
