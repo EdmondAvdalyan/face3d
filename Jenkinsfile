@@ -72,7 +72,18 @@ pipeline {
 	 }
                  }
             }
-	    }
+                stage("foo") {
+                    steps {
+                        script {
+                            try {                    
+                                env.FILENAME = readFile 'testfile_new.txt'
+                                echo "${env.FILENAME}"
+                            }
+                            catch(Exception e) {
+                                 echo 'File not found'
+                            }
+                        }
+	}
 
         }
     
