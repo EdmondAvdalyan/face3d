@@ -83,8 +83,6 @@ pipeline {
                             catch(Exception e) {
                                  echo 'File not found'
                             }
-				def file = 'testfile_new.txt'
-				      file.delete()
 
                         }
 		    }
