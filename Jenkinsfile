@@ -50,10 +50,9 @@ pipeline {
 			    params.each{name, value ->
 				    def output = "${name} = ${value}"
 				        
-				    def logFile = new File("output.log")
+				    
 
-
-				        writeFile file: "newfile.txt", text: "${output}"
+				    def logFile = writeFile file: "newfile.txt", text: "${output}"
 
 
 
