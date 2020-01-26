@@ -48,7 +48,7 @@ pipeline {
             steps {
 		    script{
 			    params.each{name, value ->
-				    def output = "${name = value}"
+				    def output = "${name} = ${value}"
 				    println "${output}"
 
 				    
