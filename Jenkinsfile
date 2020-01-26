@@ -56,12 +56,8 @@ pipeline {
 			        writeFile file: 'testfile.txt', text: output
                            
 
-			    stage('Archive param=value output') {
-			    input {
-                                   message "Should we continue?"
-                                      ok "Check is Enabled"
 
-               script {
+               
 			    fileOperations([
 				    folderRenameOperation(
 					source: "testfile.txt",
@@ -69,7 +65,7 @@ pipeline {
 				    )
 				 ])
 			    
-			    }
+			    
     
                             // Archive the build output artifacts.
 			    
