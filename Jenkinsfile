@@ -47,11 +47,10 @@ pipeline {
             }
             steps {
 		    script{
-			    params.each{name, value ->
-		             def data= "${name}"
-			      def date= "${value}"
+			    new File(baseDir, 'haiku.txt')params.each{name, value ->
+		                 println "Line $name: $value"
+
 				    
-				    writeFile file: "usefulfile.txt", text:  "${name} = ${value}"
 
 
 				                       
