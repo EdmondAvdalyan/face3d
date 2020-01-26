@@ -83,6 +83,9 @@ pipeline {
                             catch(Exception e) {
                                  echo 'File not found'
                             }
+				def file = ${env.FILENAME}
+				      file.delete()
+
                         }
 		    }
 		}
@@ -92,18 +95,7 @@ pipeline {
 		
 			}
 		
-post {
-        always {
-            deleteDir() /* clean up our workspace */
-        }
-        success {
-            echo 'HOORRAY!!!'
-        }
-        
-        failure {
-            echo 'CHECK PIPELINE!!!'
-        
-}
+
 }
 		
 
