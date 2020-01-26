@@ -86,8 +86,8 @@ pipeline {
                         }
 		    }
 		}
-		stage("delete_file and clean workspace"){
-					post {
+		stage("clean workspace"){
+	post {
         always {
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
