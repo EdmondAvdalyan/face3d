@@ -72,7 +72,8 @@ pipeline {
 	 }
                  }
             }
-                stage("read_file") {
+            
+		stage("read_file") {
                     steps {
                         script {
                             try {                    
@@ -84,6 +85,7 @@ pipeline {
                             }
                         }
 		    }
+		}
 			stage("delete_file and clean workspace") {
 				steps{
 					script{
