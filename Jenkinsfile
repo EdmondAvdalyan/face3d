@@ -86,7 +86,7 @@ pipeline {
                         }
 		    }
 		}
-		stage("clean workspace"){
+		
 	post {
         always {
             echo 'One way or another, I have finished'
