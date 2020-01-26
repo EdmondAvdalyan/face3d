@@ -38,9 +38,9 @@ pipeline {
                               m.eachWithIndex{ match, idx ->
                             println "line[${idx}] = ${match}"
 
-}
-}
-}
+        }
+     }
+  }
 	}
 
         stage('Check_master') {
@@ -83,7 +83,7 @@ pipeline {
                             catch(Exception e) {
                                  echo 'File not found'
                             }
-
+			}
                         }
 		    }
 		stage('Git') {
