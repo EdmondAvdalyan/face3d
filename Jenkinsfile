@@ -19,16 +19,9 @@ pipeline {
   }
 	
   stages {
-       stage('CHECK_condition') {
-          input {
-                message "Should we continue?"
-                ok "Check is Enabled"
-		  parameters {
-                        booleanParam(name: 'CHECK', defaultValue: true, description: 'check')
-	       }
-            }
-	       steps {
-		     echo "${params}"
+       stage('Build') {
+               steps {
+		     sh  'mvn -B -DskipTests clean package'
 	
 		    
 		    //count repeated string in multiline string  
